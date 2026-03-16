@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Research · Maurielle Noto</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inconsolata:wght@200;300;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-name">Maurielle Noto</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="research.html" class="active">Research</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="cv.pdf" target="_blank">CV</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+
+  <main class="page-wrap">
+
+    <!-- ============================================
+         PAGE INTRO
+         ============================================ -->
+    <section class="section">
+      <span class="label">Research</span>
+      <h1>My Work</h1>
+
+      <!-- 
+        YOUR TURN: A short paragraph about your research interests
+        in general — what themes connect your work?
+        What draws you to planetary science?
+      -->
+      <p class="lead">
+        My research journey spans modelling and observation with projects across Cambridge and overseas.
+        What connects it all is a curiosity about how planetary systems come to look the way they do.
+      </p>
+      <div class="jump-links">
+        <a href="#past-work">Past Work ↓</a>
+        <a href="#publications">Publications ↓</a>
+      </div>
+    </section>
+
+
+    <!-- ============================================
+         PROJECT 1 — MARS VALLEY WIDTHS
+         ============================================ -->
+    <section class="section">
+
+      <span class="label">Master's Research · Ongoing</span>
+      <h2>Global Valley Widths on Mars</h2>
+      <p class="advisor">Advisor: Prof. Gaia Stucky de Quay (MIT)</p>
+
+      <!-- 
+        YOUR TURN: This is the full version of the project description.
+        You can write as much as you want here.
+        Think about: what's the question, how are you approaching it,
+        what have you found so far, why does it matter?
+      -->
+      <p class="lead">The red planet was once a wet world. 
+        Its valley networks are some of the strongest evidence we have for sustained liquid water on an early Mars. 
+        While there has been extensive research examining these features, their widths have yet to be mapped at a global scale.</p>
+
+      <p>Valley width is a meaningful morphological signal. It reflects the intensity 
+        of past surface flow and preserves the fingerprints of modifying processes that 
+        shaped Mars' early surface. Combined with existing measurements of valley depth and 
+        length, a global width dataset would offer an unprecedented window into the spatial 
+        patterns of ancient water activity across the planet.</p>
+
+      <p>This project builds a computational pipeline to intake mapped Martian valley 
+        networks and their associated depth profiles from 
+        <a href="https://doi.org/10.1038/s41586-021-03860-1" target="_blank">Goudge et al. (2021)</a>, 
+        calculating valley widths via perpendicular transects across 
+        topographic rasters at regular intervals along valley centerlines.</p>
+
+      <p>The resulting width measurements are then plotted against their associated depths 
+        to derive the width-to-depth ratio, the α parameter described in <a href="https://doi.org/10.1130/G21171.1" 
+        target="_blank">Finnegan et al. (2005)</a>, which serves as a proxy for sediment composition across different regions 
+        of Mars. By comparing predicted composition with the spatial behavior of width and depth along 
+        each valley, this work aims to distinguish between instances of catastrophic flooding and slow, 
+        calm alluvial flow.</p>
+
+      <div class="card-tags" style="margin-top: 1.5rem;">
+        <span class="tag">Mars</span>
+        <span class="tag">Geomorphology</span>
+        <span class="tag">Remote Sensing</span>
+        <span class="tag">Fluvial Processes</span>
+        <!-- Add or remove tags as you like -->
+      </div>
+
+      <p style="margin-top: 1.5rem;">
+        <a href="https://github.com/maurielle-noto/mars-global-valley-widths" class="card-link" target="_blank">View code on GitHub →</a>
+      </p>
+
+    </section>
+
+     <!-- ============================================
+          PAST PROJECTS
+          ============================================ -->
+      <section class="section section-header-only" id="past-work">
+        <span class="label">Past Work</span>
+        <h2 class="section-divider-heading">Previous Projects</h2>
+      </section>
+
+    <!-- ============================================
+         PROJECT 2 — EXOMOON FORMATION
+         ============================================ -->
+    <section class="section">
+
+      <span class="label">Undergraduate Thesis · 2025</span>
+      <h2>Modelling Exomoon Formation</h2>
+      <p class="advisor">Advisors: Prof. Richard Teague (MIT) & Dr. James Owen (ICL)</p>
+
+      <p class="lead">Moons around planets beyond our solar system have never been directly observed, 
+        yet understanding how they form opens a window into the broader story of planetary system evolution.</p>
+
+      <p>
+        Using DustPy <a href="https://arxiv.org/abs/2207.00322" target="_blank">(Stammler & Birnstiel 2022)</a>, I simulated the evolution of a circumplanetary disk 
+        around a Jupiter-like planet, varying dust particle sizes and fragmentation velocities
+        to track how grains grow, drift, and couple with the surrounding gas.
+        Regardless of initial injected grain size, the disk consistently evolves toward the same
+        maximum grain size of 0.5 cm, with larger fragmentation velocities enabling faster
+        growth and earlier steady-state evolution. These simulations establish a baseline framework for identifying
+        the conditions under which streaming instability, and ultimately moon formation, could occur.</p>
+
+      <p>This project began during a summer at <strong>Imperial College London (ICL) </strong>  through MIT's 
+        International Science and Technology Initiatives (MISTI), and grew into my undergraduate thesis.</p>
+      
+      <details class="figures-dropdown">
+        <summary>Selected Figures</summary>
+
+        <figure class="plot" id="plot-1">
+          <img src="3asigdust.png" alt="plot description" onclick="toggleCaption('plot-1')" />
+          <figcaption>
+            <span class="caption-short">Dust Surface Density Evolution Across Simulations.</span>
+            <span class="caption-full">Dust surface density evolution for three particle injection sizes 
+              (100 μm, 1 mm, and 1 cm) in separate subplots, highlighting differences in dust distribution across the disk. 
+              Surface densities for all three simulations start at similar values but exhibit variations near the edge of the 
+              disk due to differences in radial drift and grain growth dynamics. The 1 mm and 1 cm cases show a more gradual 
+              falloff compared to the 100 μm case, which drops off more sharply due to faster radial drift of smaller grains.</span>
+            <span class="caption-toggle" onclick="toggleCaption('plot-1')">Read more ↓</span>
+          </figcaption>
+        </figure>
+
+        <figure class="plot" id="plot-2">
+          <img src="sigmaboth.png" alt="plot description" onclick="toggleCaption('plot-1')" />
+          <figcaption>
+            <span class="caption-short">Evolution of gas and dust surface densities for the 1 mm maximum injection size
+              case </span>
+            <span class="caption-full">Evolution of gas and dust surface densities for the 1 mm maximum injection size case. 
+              Blue lines represent gas and red lines represent dust at various timesteps. 
+              Both profiles evolve about the injection radius r<sub>inj</sub> and approach a steady-state distribution over time.</span>
+            <span class="caption-toggle" onclick="toggleCaption('plot-2')">Read more ↓</span>
+          </figcaption>
+        </figure>
+
+        <figure class="plot" id="plot-3">
+          <img src="fragvels.jpg" alt="plot description" onclick="toggleCaption('plot-3')" />
+          <figcaption>
+            <span class="caption-short">Dust size distribution across the CPD for three simulations with various fragmentation velocities</span>
+            <span class="caption-full">Dust size distribution across the CPD for three simulations with 
+              v<sub>frag</sub> = 100, 500, and 1000 cm/s (left to right), each at their final simulation time 
+              (1261, 774, and 559 years, respectively). Higher fragmentation velocities allow for growth of 
+              larger particles with higher surface densities, particularly near the injection radius r<sub>inj</sub>. 
+              The 1000 cm/s case shows dust mass up to ~10<sup>4</sup> g and extended regions of high Σ<sub>d</sub>, 
+              indicating more efficient inward drift and accumulation of large solids.</span>
+            <span class="caption-toggle" onclick="toggleCaption('plot-3')">Read more ↓</span>
+          </figcaption>
+        </figure>
+      </details>
+
+      <div class="card-tags" style="margin-top: 1.5rem;">
+        <span class="tag">Exomoons</span>
+        <span class="tag">Disk Dynamics</span>
+        <span class="tag">Circumplanetary Disk</span>
+      </div>
+
+      <p style="margin-top: 1.5rem; display: flex; gap: 2rem; flex-wrap: wrap;">
+        <a href="https://github.com/maurielle-noto/modeling-exomoon-formation" class="card-link" target="_blank">View code on GitHub →</a>
+        <a href="https://dspace.mit.edu/bitstream/handle/1721.1/159960/Noto%2CMaurielle_eaps-sb-2025-thesis.pdf?sequence=1&isAllowed=y" class="card-link" target="_blank">Read the thesis (PDF) →</a>
+      </p>
+
+    </section>
+
+    <!-- ============================================
+         PROJECT 3 — TENERIFE
+         ============================================ -->
+    <section class="section">
+      <span class="label">12.411 Astronomy Field Camp · Jan 2024</span>
+      <h2>Observing the Transits of Three Exoplanet Candidates</h2>
+      <p class="advisor">Advisor: Dr. Michael J. Person (MIT)</p>
+    
+      <p class="lead"> The transits of three exoplanet candidates were observed from <strong> Teide Observatory </strong>
+        at the <strong>Instituto de Astrofísica de Canarias (IAC)</strong> in Tenerife, Canary Islands 
+        — using photometric data to characterize their lightcurves and constrain their planetary parameters.</p>
+      <p>Using the <strong>IAC80 and Artemis (SPECULOOS)</strong> telescopes at Teide Observatory, 
+        my collaborators and I collected photometric observations of three TESS Objects of Interest (TOIs),
+        IDs: 2866.02, 6373.01, 4141.01, sourced from the Exoplanet Follow-up Observing Program (EXOFOP).
+
+      </p>
+      <p>Aperture photometry was performed using AstroImageJ 
+        to extract lightcurves and fit transit models, deriving planetary 
+        and orbital parameters for each candidate. Modeled transit depths and 
+        planet radii were compared against EXOFOP profiles, showing close agreement across all three targets. 
+        Findings were reported at the IAC in January 2024 and uploaded to each TOI's EXOFOP page.
+      </p>
+      <p>While the analysis confirms these candidates as credible transit signals consistent with 
+        planetary companions, further radial velocity measurements are needed to fully confirm their planetary nature.
+      </p>
+    
+      <details class="figures-dropdown">
+        <summary>Selected Figures</summary>
+
+        <figure class="plot" id="plot-4">
+          <img src="TOI-2866.01 JUST Tranist Fit Ap 6px Final.png" alt="plot description" onclick="toggleCaption('plot-4')" />
+          <figcaption>
+            <span class="caption-short">866.01 transit lightcurve in SDSS z’ filter from Teide Observatory.</span>
+            <span class="caption-full">Raw data lightcurve generated via AIJ graphing tools. 
+              TOI 2866.01 relative flux (normalize) plotted against time (BJD). 
+              Predicted ingress and egress times are denoted. 
+              The lightcurve shows an approximate 20 ppt drop in brightness.</span>
+            <span class="caption-toggle" onclick="toggleCaption('plot-4')">Read more ↓</span>
+          </figcaption>
+        </figure>
+
+        <figure class="plot" id="plot-5">
+          <img src="TOI-6373.01 JUST Lightcurve Tranist Fit Ap 6px Final.png" alt="plot description" onclick="toggleCaption('plot-5')" />
+          <figcaption>
+            <span class="caption-short">6373.01 transit lightcurve in SDSS z’ from Teide Observatory. </span>
+            <span class="caption-full">Raw data lightcurve generated via AIJ graphing tools. TOI 6373.01 relative flux (normalize) 
+              plotted against time (BJD). Predicted ingress and egress times are denoted. The lightcurve shows a 10 ppt drop in brightness.</span>
+            <span class="caption-toggle" onclick="toggleCaption('plot-5')">Read more ↓</span>
+          </figcaption>
+        </figure>
+
+        <figure class="plot" id="plot-6">
+          <img src="TOI-4141.01 JUST Tranist Fit Ap 10px Final.png" alt="plot description" onclick="toggleCaption('plot-6')" />
+          <figcaption>
+            <span class="caption-short">4141.01 transit lightcurve in SDSS z’ filter from Teide Observatory</span>
+            <span class="caption-full">Raw data lightcurve generated via AIJ graphing tools. 
+              TOI 4141.01 relative flux (normalize) plotted against time (BJD). 
+              Predicted ingress and egress times are denoted. The lightcurve shows a 10 ppt drop in brightness</span>
+            <span class="caption-toggle" onclick="toggleCaption('plot-6')">Read more ↓</span>
+          </figcaption>
+        </figure>
+      </details>
+
+      <details class="figures-dropdown">
+        <summary>Field Photos</summary>
+      
+        <div class="photo-row" style="padding: 1.5rem;">
+      
+          <div class="gallery-item">
+            <img src="420150385_638279838355857_3012144894033386287_n.JPG" alt= />
+            <p class="caption"> The 2024 12.411 cohort.</p>
+          </div>
+
+          <div class="gallery-item">
+            <img src="IMG_0042.jpg" alt= />
+            <p class="caption"> One of the many breath taking sunrises from our time on Tenerife</p>
+          </div>
+    
+    
+      
+        </div>
+      
+      </details>
+    
+      <div class="card-tags" style="margin-top: 1.5rem;">
+        <span class="tag">Exoplanets</span>
+        <span class="tag">Photometry</span>
+      </div>
+    </section>
+
+     <!-- ============================================
+        PROJECT 4 — GAIA UROP
+        ============================================ -->
+      <section class="section">
+        <span class="label">MIT Summer UROP · 2023</span>
+        <h2>Martian Hillslope Analysis Model</h2>
+        <p class="advisor">Advisor: Prof. Gaia Stucky de Quay (MIT)</p>
+
+        <p class="lead">Developing a hillslope model to distinguish water-driven from ice-driven 
+          erosion on the Martian surface — and building the computational workflows to run it at scale.</p>
+          
+          <p>As an undergrad research assistant I helped develop a hillslope model to analyze fluvial erosion on Martian surfaces, 
+          identifying features formed by flowing water versus ice melt to advance our understanding 
+          of ancient Martian hydrology.</p>
+          
+          <p>Alongside the modeling work, I engineered workflows for DEM analysis, flow path 
+          calculations, and erosion simulations — improving data processing efficiency and enabling 
+          scalable model runs across large datasets.</p>
+      </section>
+
+
+    <!-- ============================================
+        PROJECT 4 — WALLACE
+        ============================================ -->
+    <section class="section">
+      <span class="label">MIT Summer UROP · 2022</span>
+      <h2>Koronis Family Asteroids' Light Curves</h2>
+      <p class="advisor">Advisor: Dr. Michael J. Person (MIT) & Dr. Stephen Slivan (MIT)</p>
+    
+      <p class="lead">Collecting and refining optical light curves for Koronis family asteroids at 
+        <strong>MIT's Wallace Astrophysical Observatory (WAO)</strong> in Westford, MA.</p>
+
+      <p>Using WAO's Elliot (24") telescope, 
+        I collected and processed photometric data of Koronis family asteroids 
+        as part of an ongoing observational program. Magnitudes were calibrated and light 
+        curves refined using SkyX and AstroImageJ, with updated curves incorporating 
+        new observational findings into the existing dataset.</p>
+
+      <p>This work contributed to four publications in the Minor Planet Bulletin, 
+        characterizing the rotation periods and lightcurve properties of 
+        Koronis family members (452) Hamiltonia, (5139) Rumoi, (1497) Tampere, and (1389) Onnie.</p>
+
+      <details class="figures-dropdown">
+        <summary>Field Photos</summary>
+      
+        <div class="photo-row" style="padding: 1.5rem;">
+      
+          <div class="gallery-item">
+            <img src="IMG_3744.JPG" alt= />
+            <p class="caption">Elliot 24 in. and I (My favorite of the WAO telescopes!)</p>
+          </div>
+      
+          <div class="gallery-item">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem;">
+              <img src="IMG_8522.JPG"/>
+              <img src="IMG_8527.JPG"/>
+            </div>
+            <p class="caption">One of the occasional day trips to the observatory to help out with
+              equipment maintenance. This time we installed WAO's 'Pier 1' telescope.
+            </p>
+          </div>
+      
+        </div>
+      
+      </details>
+
+      <div class="card-tags" style="margin-top: 1.5rem;">
+        <span class="tag">Asteroids</span>
+        <span class="tag">Photometry</span>
+      </div>
+    </section>
+
+
+  <!-- ============================================
+     PUBLICATIONS
+     ============================================ -->
+<section class="section" id="publications">
+
+  <span class="label">Publications</span>
+  <h2 class="section-divider-heading">Publications</h2>
+
+  <div class="pub-list">
+
+    <div class="pub-item">
+      <div class="pub-year">2024</div>
+      <div class="pub-info">
+        <h3>Lightcurves and Derived Results for Koronis Family Member (452) Hamiltonia</h3>
+        <p>Slivan, S. M., Barrera, K., Colclasure, A. M., Cusson, E. M., Larsen, S. S., McLellan-Cassivi, C. J., Moulder, S. A., Nair, P. R., Namphy, P. D., Neto, O. S., <strong>Noto, M. I.</strong>, R., Maya S., Rhodes, S. J., & Youssef, S. A.</p>
+        <p class="caption">Minor Planet Bulletin, 51, 176–179</p>
+        <a href="https://ui.adsabs.harvard.edu/abs/2024MPBu...51..176S/abstract" class="card-link" target="_blank">View on ADS →</a>
+      </div>
+    </div>
+
+    <div class="pub-item">
+      <div class="pub-year">2024</div>
+      <div class="pub-info">
+        <h3>Lightcurves and Derived Results for Koronis Family Member (5139) Rumoi Including a Discussion of Measurements for Epochs Analysis</h3>
+        <p>Slivan, S. M., Barrera, K., Colclasure, A. M., Cusson, E. M., Larsen, S. S., McLellan-Cassivi, C. J., Moulder, S. A., Nair, P. R., Namphy, P. D., Neto, O. S., <strong>Noto, M. I.</strong>, Redden, M. S., Rhodes, S. J., & Youssef, S. A.</p>
+        <p class="caption">Minor Planet Bulletin, 51, 6–10</p>
+        <a href="https://ui.adsabs.harvard.edu/abs/2024MPBu...51....6S/abstract" class="card-link" target="_blank">View on ADS →</a>
+      </div>
+    </div>
+
+    <div class="pub-item">
+      <div class="pub-year">2023</div>
+      <div class="pub-info">
+        <h3>Rotation Period of Koronis Family Member (1497) Tampere</h3>
+        <p>Slivan, S. M., Brothers, T. C., Colclasure, A. M., Larsen, S. S., McLellan-Cassivi, C. J., Neto, O. S., <strong>Noto, M. I.</strong>, Redden, M. S., Wilkin, F. P., & Das, N.</p>
+        <p class="caption">Minor Planet Bulletin, 50, 125–126</p>
+        <a href="https://ui.adsabs.harvard.edu/abs/2023MPBu...50..125S/abstract" class="card-link" target="_blank">View on ADS →</a>
+      </div>
+    </div>
+
+    <div class="pub-item">
+      <div class="pub-year">2023</div>
+      <div class="pub-info">
+        <h3>Synodic And Sidereal Rotation Periods Of Koronis Family Member (1389) Onnie</h3>
+        <p>Slivan, S. M., Colclasure, A. M., Larsen, S. S., McLellan-Cassivi, C. J., Neto, O. S., <strong>Noto, M. I.</strong>, Redden, M. S., & Wilkin, F. P.</p>
+        <p class="caption">Minor Planet Bulletin, 50, 8–10</p>
+        <a href="https://ui.adsabs.harvard.edu/abs/2023MPBu...50....8S/abstract" class="card-link" target="_blank">View on ADS →</a>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+  </main>
+
+
+  <footer>
+    © 2026 Maurielle Noto
+  </footer>
+
+<script>
+  function toggleCaption(id) {
+    const plot = document.getElementById(id);
+    const toggle = plot.querySelector('.caption-toggle');
+    plot.classList.toggle('expanded');
+    toggle.textContent = plot.classList.contains('expanded') ? 'Show less ↑' : 'Read more ↓';
+  }
+</script>
+
+</body>
+</html>

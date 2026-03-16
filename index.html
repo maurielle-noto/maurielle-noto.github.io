@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Maurielle Noto</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inconsolata:wght@200;300;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============================================
+       NAVIGATION
+       The nav is the same on every page.
+       To mark which page is active, add class="active"
+       to that page's link — e.g. on this page,
+       "Home" has class="active".
+       ============================================ -->
+  <nav>
+    <a href="index.html" class="nav-name">Maurielle Noto</a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="cv.pdf" target="_blank">CV</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+
+  <main class="page-wrap">
+
+    <!-- ============================================
+         HERO — your name + one-line blurb
+         ============================================ -->
+  <section class="section">
+
+    <div class="hero-top">
+      <div>
+        <span class="label">Planetary Scientist · MIT EAPS</span>
+        <h1>Maurielle Noto</h1>
+        <div class="hero-links">
+          <a href="https://github.com/maurielle-noto" target="_blank">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://linkedin.com/in/YOURPROFILE" target="_blank">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+          <a href="mailto:minoto@mit.edu">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+      <img src="IMG_1552.jpg" alt="Maurielle Noto in the field" class="hero-photo" />
+    </div>
+
+      <!-- 
+        YOUR TURN: Replace this with 1–2 sentences about you.
+        Keep it short — this is the first thing people read.
+        Think: who you are, what you study, what drives you.
+      -->
+      <p class="lead">
+        I'm drawn to the question of how planetary bodies remember their histories. 
+        From ancient river systems on Mars to the birth of moons around distant giants, 
+        I work at the intersection of geomorphology, disk physics, and remote sensing, 
+        building the computational tools to study them.
+      </p>
+
+    </section>
+
+
+    <!-- ============================================
+         RESEARCH OVERVIEW
+         Two cards — one per project.
+         Full details live on research.html.
+         ============================================ -->
+    <section class="section">
+
+      <span class="label">Research</span>
+      <h2>What I Work On</h2>
+
+      <!-- 
+        YOUR TURN: Fill in the card titles, descriptions,
+        and tags. The "View more" links go to research.html
+        which has the full version.
+      -->
+      <div class="card-grid">
+
+        <div class="card">
+          <span class="label">Master's · Ongoing</span>
+          <h3>Global Valley Widths on Mars</h3>
+          <p>
+            Valley widths across Mars have yet to be systematically mapped. 
+            This work aims to produce the first global dataset of Martian river valley widths, 
+            helping reconstruct the planet's lost hydrological history.
+          </p>
+          <div class="card-tags">
+            <span class="tag">Mars</span>
+            <span class="tag">Geomorphology</span>
+            <span class="tag">Remote Sensing</span>
+          </div>
+          <a href="research.html" class="card-link">Read more →</a>
+        </div>
+
+        <div class="card">
+          <span class="label">Undergraduate Thesis · 2025</span>
+          <h3>Modelling Exomoon Formation</h3>
+          <p>
+            The origin of moons around giant planets remains poorly understood. 
+            This work simulates the evolution of circumplanetary disks to identify 
+            the conditions that could trigger satellite formation.
+          </p>
+          <div class="card-tags">
+            <span class="tag">Exomoons</span>
+            <span class="tag">Disk Dynamics</span>
+            <span class="tag">DustPy</span>
+          </div>
+          <a href="research.html" class="card-link">Read more →</a>
+        </div>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+  <footer>
+    © 2026 Maurielle Noto
+  </footer>
+
+</body>
+</html>

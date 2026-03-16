@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About · Maurielle Noto</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inconsolata:wght@200;300;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    /* ============================================
+       ABOUT PAGE — extra styles just for this page
+       ============================================
+
+       General styles live in style.css.
+       Anything that's only needed on THIS page
+       goes here so you can find it easily.
+       ============================================ */
+
+    /* Photo + text side by side at the top */
+    .about-hero {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 3.5rem;
+      align-items: start;
+    }
+
+    .headshot {
+      width: 100%;
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      background: var(--color-surface);  /* placeholder color while image loads */
+    }
+
+    /* Interest blocks */
+    .interests-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .interest-block {
+      padding: 1.75rem;
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+    }
+
+    .interest-block h3 {
+      margin-bottom: 0.5rem;
+    }
+
+    .interest-block p {
+      font-size: 0.9rem;
+      margin-bottom: 0;
+    }
+
+    /* Photo gallery with captions */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.25rem;
+      margin-top: 1.5rem;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      object-fit: contain;
+      background: var(--color-surface);
+    }
+
+    .gallery-item .caption {
+      margin-top: 0.5rem;
+    }
+
+    @media (max-width: 680px) {
+      .about-hero {
+        grid-template-columns: 1fr;
+      }
+      .headshot {
+        aspect-ratio: 1;
+        max-width: 240px;
+      }
+      .interests-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-name">Maurielle Noto</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="cv.pdf" target="_blank">CV</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+
+  <main class="page-wrap">
+
+    <!-- ============================================
+         INTRO + HEADSHOT
+         ============================================ -->
+    <section class="section">
+
+      <div class="about-hero">
+
+        <!--
+          YOUR TURN: Replace "your-photo.jpg" with
+          the actual filename of your headshot.
+          Place the image file in the same folder
+          as this HTML file.
+        -->
+        <img
+          class="headshot"
+          src="IMG_4FA35BA39446-1.jpeg"
+          alt="Maurielle Noto"
+        />
+
+        <div>
+          <span class="label">About Me</span>
+          <h1>Hi, I'm Maurielle.</h1>
+
+          <!--
+            YOUR TURN: Write a few paragraphs about yourself.
+            This is more personal than the research page —
+            who are you as a person, not just as a scientist?
+            How did you get into planetary science?
+            What do you care about?
+          -->
+          <p class="lead">
+            Just another nerd curious about what's going on upstairs.
+          </p>
+
+          <p>
+            I think I am quite lucky to have known what I have wanted to do from a young age. My planetary obsession began at age 5
+            reading my children's encyclopedia. It opened to the 'space facts' page, and here we are now!
+          </p>
+
+          <p>
+            I am currently a master's student in Earth, Atmospheric, and Planetary Sciences at MIT, where I also completed my undergraduate degree.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ============================================
+         BEYOND RESEARCH — personal interests
+         ============================================ -->
+    <section class="section">
+
+      <span class="label">Beyond Research</span>
+      <h2>Outside the Lab</h2>
+
+      <p>When I am away from the science, I enjoy attending music festivals, riding my bike around Cambridge, 
+        scoring deals on Facebook marketplace home decor (my living room is wicked), improv comedy, and exploring the big beautiful outdoors!</p>
+      <details class="figures-dropdown" style="margin-top: 1rem;">
+        <summary>Fun @ MIT</summary>
+        <div class="photo-row" style="padding: 1.5rem;">
+    
+          <div class="gallery-item">
+            <img src="rkb.jpeg" alt="description" />
+            <p class="caption">MIT Improv!</p>
+          </div>
+    
+          <div class="gallery-item">
+            <img src="eaps.jpeg" alt="description" />
+            <p class="caption">EAPS Holiday Party</p>
+          </div>
+
+          <div class="gallery-item">
+            <img src="vb.jpeg" alt="description" />
+            <p class="caption">Instramural Volleyball</p>
+          </div>
+    
+        </div>
+      </details>
+
+      <!--
+        YOUR TURN: Fill in each interest block.
+        Add or remove blocks as you like —
+        just copy/paste the .interest-block div.
+      -->
+
+        <div class="interest-block">
+          <h3>🎶 Live Music & Festivals</h3>
+          <p>
+            One of my favorite places to be. The energy of the people, solely gathered for a shared love of music is incredible to be around, and keeps me coming back for more. My favorite festival
+            is Tyler the Creator's Camp Flognaw. My best friend and I have attended two years in a row and hope to keep 
+            it as an annual tradition. Yes, I have premptively started saving for the costly flights to LA.
+          </p>
+          <details class="figures-dropdown" style="margin-top: 1rem;">
+            <summary>Photos</summary>
+            <div class="photo-row" style="padding: 1.5rem;">
+        
+              <div class="gallery-item">
+                <img src="1272601E-E83D-482E-8F05-7536EE8B1D86.JPG" alt="description" />
+                <p class="caption">CFG 2024</p>
+              </div>
+        
+              <div class="gallery-item">
+                <img src="DSCN3386.JPG" alt="description" />
+                <p class="caption">CFG 2025</p>
+              </div>
+        
+            </div>
+          </details> 
+        </div>
+
+        <div class="interest-block">
+          <h3>🌍 Travel & Outdoors</h3>
+          <p>
+            In the age where we spend the majority of our time staring at a screen and sitting at a desk, it is absolutely imperative
+            to get outside and reconnect with our natural world.
+            Growing up in Arizona, I never really saw 'green' until starting at MIT. Every day when the sun is shining, you can bet I am
+            biking up to the nearest body of water or laying in the park.
+          </p>
+          <details class="figures-dropdown" style="margin-top: 1rem;">
+            <summary>Photos</summary>
+            <div class="photo-row" style="padding: 1.5rem;">
+        
+              <div class="gallery-item">
+                <img src="snuba.jpeg" alt="description" />
+                <p class="caption">Snuba in Maui</p>
+              </div>
+        
+              <div class="gallery-item">
+                <img src="parkpaint.JPG" alt="description" />
+                <p class="caption">Painting in the park</p>
+              </div>
+
+              <div class="gallery-item">
+                <img src="IMG_4834.JPG" alt="description" />
+                <p class="caption">Hiking the Seven Sisters Cliffs</p>
+              </div>
+        
+            </div>
+          </details>           
+        </div>
+
+        <div class="interest-block">
+          <h3>🎨 Art</h3>
+          <p>
+            Having an artist as a mother really accelerated my ability to pick up drawing, painting, sewing, and photography.
+            Not in that there is confined process to follow, but that there is beauty in everything and your art is whatever you want it to be.
+            My current projects right now are water color paintings of the La Jolla Shores cliffs in California and a take on the 'All in the Golden Afternoon'
+            scene from Alice in Wonderland.
+          </p>
+          <details class="figures-dropdown" style="margin-top: 1rem;">
+            <summary>Photos</summary>
+            <div class="photo-row" style="padding: 1.5rem;">
+        
+              <div class="gallery-item">
+                <img src="IMG_181197FDAD5F-1.jpeg" alt="description" />
+                <p class="caption">La Jolla Shores Cliffs (WIP)</p>
+              </div>
+        
+              <div class="gallery-item">
+                <img src="IMG_6E161F9151D0-1.jpeg" alt="description" />
+                <p class="caption">Quilted pillow case</p>
+              </div>
+          </details>         
+        </div>
+
+          <div class="interest-block">
+            <h3>📷 Photography</h3>
+            <p>
+              My interest in photography started when I was 13 when my friends all got this 'cool-girl' app VSCO.
+              I take the most joy in capture nature and focusing on symmetry, and the feeling of looking at the view. Check out some
+              of my work below! 
+            </p>
+          
+              </div>
+            </details>             
+          </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ============================================
+         PHOTO GALLERY — your photography
+         ============================================ -->
+    <section class="section">
+
+      <span class="label">Photography</span>
+      <h2>Through My Lens</h2>
+
+      <!--
+        YOUR TURN: For each photo you want to show,
+        replace "photo-1.jpg" with your actual filename,
+        and write a caption describing the photo.
+
+        Add as many .gallery-item divs as you want.
+        Remove the ones you don't need.
+
+        Put all your image files in the same folder
+        as this HTML file.
+      -->
+      <div class="gallery">
+
+        <div class="gallery-item">
+          <img src="IMG_E6C695F36DC8-1.jpeg" alt="[describe the photo]" />
+          <p class="caption">St. James Park - London</p>
+        </div>
+
+        <div class="gallery-item">
+          <img src="IMG_6652E7E3C283-1.jpeg" alt="[describe the photo]" />
+          <p class="caption">Kensington Palace, London</p>
+        </div>
+
+        <div class="gallery-item">
+          <img src="IMG_2BB3040421C3-1.jpeg" alt="[describe the photo]" />
+          <p class="caption">Seven Sisters Cliffs, UK</p>
+        </div>
+
+        <div class="gallery-item">
+          <img src="IMG_1558.JPG" alt="" />
+          <p class="caption">Boulder, CO</p>
+        </div>
+
+        <div class="gallery-item">
+          <img src="IMG_1561.jpg" alt="[describe the photo]" />
+          <p class="caption">Rocky Mountains, CO</p>
+        </div>
+
+        <div class="gallery-item">
+          <img src="IMG_1557.JPG" alt="[describe the photo]" />
+          <p class="caption">Atherton, CA</p>
+        </div>
+        <div class="gallery-item">
+          <img src="IMG_1553 2.JPG" alt="[describe the photo]" />
+          <p class="caption">Huntington Beach, CA</p>
+        </div>
+        <div class="gallery-item">
+          <img src="IMG_9423.jpg" alt="[describe the photo]" />
+          <p class="caption">Madrid, Spain</p>
+        </div>
+        <div class="gallery-item">
+          <img src="IMG_1555.jpg" alt="[describe the photo]" />
+          <p class="caption">Naples, FL</p>
+        </div>
+        <div class="gallery-item">
+          <img src="IMG_1554.jpg" alt="[describe the photo]" />
+          <p class="caption">Breckenridge, CO</p>
+        </div>
+        <div class="gallery-item">
+          <img src="IMG_1559.jpg" alt="[describe the photo]" />
+          <p class="caption">Puerto Peñasco, Mexico</p>
+        </div>
+
+        <!-- Add more by copying the block above -->
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+    © 2026 Maurielle Noto
+  </footer>
+
+</body>
+</html>
